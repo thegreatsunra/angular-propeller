@@ -18,4 +18,8 @@ angular
     'ui.router',
     'ui.bootstrap',
     'routes'
-  ]);
+  ])
+  .config(function($urlRouterProvider) {
+    $urlRouterProvider
+      .otherwise('/');
+  });

@@ -12,12 +12,9 @@ angular
   .module('routes', [
     'ui.router'
   ])
-  .config(function ($stateProvider, $urlRouterProvider) {
-
-    $urlRouterProvider.otherwise('/');
-
+  .config(function ($stateProvider) {
     $stateProvider
-      .state('home', {
+      .state('main', {
         url: '/',
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
