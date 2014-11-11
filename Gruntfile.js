@@ -44,9 +44,17 @@ module.exports = function (grunt) {
         files: ['test/spec/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'karma']
       },
+      less: {
+        files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
+        tasks: ['less']
+      },
       styles: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
+      },
+      stubs: {
+        files: ['<%= yeoman.app %>/stubs/{,*/}*.csv'],
+        tasks: ['convert']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -351,7 +359,54 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+    less: {
+      development: {
+        options: {
+          compress: false
+        },
+        files: [
+          {
+            expand: true,
+            cwd: '<%= yeoman.app %>/styles',
+            src: ['{,*/}*.less', '!_*'],
+            dest: '<%= yeoman.app %>/styles',
+            ext: '.css'
+          }
+        ]
+      },
+      production: {
+        options: {
+          cleancss: true,
+        },
+        files: [
+          {
+            expand: true,
+            cwd: '<%= yeoman.app %>/styles',
+            src: ['{,*/}*.less', '!_*'],
+            dest: '<%= yeoman.app %>/styles',
+            ext: '.min.css'
+          }
+        ]
+      }
+    },
+
+    // Convert CSV files to JSON
+    convert: {
+      csvs: {
+        files: [
+          {
+            expand: true,
+            cwd: '<%= yeoman.app %>/stubs',
+            src: ['{,*/}*.csv'],
+            dest: '<%= yeoman.app %>/stubs',
+            ext: '.json'
+          }
+        ]
+      }
     }
+
   });
 
 
@@ -393,6 +448,8 @@ module.exports = function (grunt) {
     'ngAnnotate',
     'copy:dist',
     'cdnify',
+    'less',
+    'convert',
     'cssmin',
     'uglify',
     'filerev',
