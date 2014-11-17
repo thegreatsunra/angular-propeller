@@ -13,15 +13,23 @@ angular.module('angularPropellerApp')
     // ...
 
     var meaningOfLife = 42;
-    var testContentUrl = 'stubs/test.json';
+    var testOneContentUrl = 'stubs/testOne.json';
+    var testTwoContentUrl = 'stubs/testTwo.json';
+
 
     // Public API here
     return {
       someMethod: function () {
         return meaningOfLife;
       },
-      getTestContent: $resource(testContentUrl, {}, {
-        testContent: {
+      getTestOneContent: $resource(testOneContentUrl, {}, {
+        testOneContent: {
+          method: 'GET',
+          isArray: true
+        }
+      }),
+      getTestTwoContent: $resource(testTwoContentUrl, {}, {
+        testTwoContent: {
           method: 'GET',
           isArray: true
         }
