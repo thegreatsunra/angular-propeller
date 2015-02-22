@@ -355,7 +355,11 @@ module.exports = function (grunt) {
             '*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
-            'styles/fonts/{,*/}*.*'
+            'styles/fonts/{,*/}*.*',
+            'partials/**/*.html',
+            'layouts/{,*/}*.html',
+            'stubs/{,*/}*.json',
+            'scripts/directives/{,*/}*.html'
           ]
         }, {
           expand: true,
@@ -430,7 +434,6 @@ module.exports = function (grunt) {
         ]
       }
     },
-
     // Convert CSV files to JSON
     convert: {
       csvs: {
