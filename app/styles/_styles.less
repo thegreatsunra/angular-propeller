@@ -1,53 +1,18 @@
 /*---------------------------------------------------
-  main.less
-  ---------------------------------------------------*/
-/*---------------------------------------------------
-  _utilities.less
-  ---------------------------------------------------*/
-.clear {
-  clear: both;
-}
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-.clearfix:after {
-  clear: both;
-}
-.clearfix {
-  *zoom: 1;
-}
-.textCenter {
-  text-align: center;
-}
-.textRight {
-  text-align: right;
-}
-/*---------------------------------------------------
-  _base.less
-  ---------------------------------------------------*/
-[ng-click],
-[data-ng-click],
-[x-ng-click],
-[ng-href],
-[ui-sref] {
-  cursor: pointer;
-}
-/*---------------------------------------------------
   _styles.less
   ---------------------------------------------------*/
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
 }
+
 body {
   padding: 0;
 }
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -55,6 +20,7 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
+
 /* Custom page header */
 .header {
   margin-top: 10px;
@@ -68,15 +34,18 @@ body {
   line-height: 40px;
   padding-bottom: 19px;
 }
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
+
 .container-narrow > hr {
   margin: 30px 0;
 }
+
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
@@ -86,6 +55,7 @@ body {
   font-size: 21px;
   padding: 14px 24px;
 }
+
 /* Supporting marketing content */
 .marketing {
   margin: 40px 0;
@@ -93,11 +63,13 @@ body {
 .marketing p + h4 {
   margin-top: 28px;
 }
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
     max-width: 730px;
   }
+
   /* Remove the padding we set earlier */
   .header,
   .marketing,

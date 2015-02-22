@@ -1,3 +1,44 @@
+/*---------------------------------------------------
+  main.less
+  ---------------------------------------------------*/
+/*---------------------------------------------------
+  _utilities.less
+  ---------------------------------------------------*/
+.clear {
+  clear: both;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+.textCenter {
+  text-align: center;
+}
+.textRight {
+  text-align: right;
+}
+/*---------------------------------------------------
+  _base.less
+  ---------------------------------------------------*/
+[ng-click],
+[data-ng-click],
+[x-ng-click],
+[ng-href],
+[ui-sref] {
+  cursor: pointer;
+}
+/*---------------------------------------------------
+  _styles.less
+  ---------------------------------------------------*/
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
