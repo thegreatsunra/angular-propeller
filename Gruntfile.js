@@ -418,20 +418,6 @@ module.exports = function (grunt) {
             ext: '.css'
           }
         ]
-      },
-      production: {
-        options: {
-          cleancss: true,
-        },
-        files: [
-          {
-            expand: true,
-            cwd: '<%= yeoman.app %>/styles',
-            src: ['{,*/}*.less', '!_*'],
-            dest: '<%= yeoman.app %>/styles',
-            ext: '.min.css'
-          }
-        ]
       }
     },
     // Convert CSV files to JSON
