@@ -1,6 +1,6 @@
 # angular-propeller
 
-Prototyping tool with AngularJS and Bootstrap 3.
+Prototyping environment with Angular, Bootstrap and ui-router
 
 ## Installation
 
@@ -14,7 +14,7 @@ Prototyping tool with AngularJS and Bootstrap 3.
 1. type `grunt serve` to start the development server
 1. type `grunt` to build the app and generate the `dist`
 
-## Hosting on GitHub pages:
+## Hosting on GitHub Pages
 
 1. first, create a repository on GitHub and push your Angular Propeller application up to that repository
 1. remove the `dist` reference from your .gitignore file to include it in the repository
@@ -27,4 +27,4 @@ Prototyping tool with AngularJS and Bootstrap 3.
 
 ## Testing
 
-Running `grunt test` will run the unit tests with karma.
+Running `grunt test` will run the unit tests with karma
